@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Highly experimental faetch of two useful images from the same time. In order to be
+# useful as overlays the underlying map should be removed from the satellite image.
+
+YEAR=2022
+MONTH=11
+DAY=14
+
+TODAY=$YEAR$MONTH$DAY
+
+TODAY=`date +%Y%m%d`
+
+wget -O $HOME/weather/sat_eur_irrad.jpeg https://www.met.ie/images/satellite/web17_sat_eur_irrad_${TODAY}0000.jpeg > /dev/null 2>&1
+
